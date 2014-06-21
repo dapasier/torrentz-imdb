@@ -1,0 +1,16 @@
+.imdb-rating {
+	background: #E9D966;
+	color: #4E4E4E;
+	display: inline-block;
+	padding: 1px 2px;
+	margin-left: 0.3em;
+	transition: 200ms all;
+	font-size: 10px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.imdb-rating:hover {
+	background: yellow;
+}
