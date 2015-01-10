@@ -14,9 +14,42 @@ if (pathName.match(/search/)) {
 
 			var span = document.createElement('span');
 			span.setAttribute('class', 'imdb');
-			span.innerHTML = '<a title="' + result.Runtime + '" href="http://www.imdb.com/title/' + result.imdbID
-					+ '/" target="_blank"><div style="background-color:hsl(' + rating * 12 + ', 90%, 45%);" class="imdb-rating">' + rating
-					+ '</div></a>';
+			
+			var metascore = result.Metascore;
+			var metascoreHTML = '';
+			
+			if (metascore !== 'N/A') {
+				metascoreHTML = 'Metascore: ' + metascore + '/100<br /><br />'
+			}
+
+			var awards = result.Awards;
+			var awardsHTML = '';
+			
+			if (awards !== 'N/A') {
+				awardsHTML = '<tr><td><b>Awards: </b></td><td>' + result.Awards + '</td></tr>'
+			}
+			
+			span.innerHTML = '<a href="http://www.imdb.com/title/' + result.imdbID + '" target="_blank" class="imdb-tooltip">' +
+				'<div style="background-color:hsl(' + rating * 12 + ', 90%, 45%);" class="imdb-rating">' + rating + '</div>' +
+				'<span>' +
+					'<img src="' + result.Poster + '" />' +
+					'<b class="imdb-title">' + result.Title + '</b> (' + result.Year + ')<br />' +
+					result.Runtime + ' - ' + result.Genre + '<br /><br />' +
+					'Ratings: ' + rating + '/10 from ' + result.imdbVotes + ' users<br />' +
+					metascoreHTML +
+					result.Plot + '<br /><br />' +										
+					'<table>' +
+						'<tr><td><b>Country: </b></td><td>' + result.Country + '</td></tr>' +
+						'<tr><td><b>Language: </b></td><td>' + result.Language + '</td></tr>' +
+						'<tr><td><b>Released: </b></td><td>' + result.Released + '</td></tr>' +
+						awardsHTML +
+						'<tr><td><b>Director: </b></td><td>' + result.Director + '</td></tr>' +
+						'<tr><td><b>Writer: </b></td><td>' + result.Writer + '</td></tr>' +
+						'<tr><td><b>Actors: </b></td><td>' + result.Actors + '</td></tr>' +
+					'</table>' +
+				'</span>' +
+			'</a>';
+
 			dd.querySelector('.v').insertAdjacentElement('beforeBegin', span);
 
 			var spanWidth = parseInt(window.getComputedStyle(span).width);

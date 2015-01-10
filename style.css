@@ -23,3 +23,51 @@ div.results>dl>dd>span.imdb {
 div.results>dl:hover {
 	background-color: #F5F5F5;
 }
+
+a.imdb-tooltip {
+	outline:none;
+}
+
+a.imdb-tooltip b.imdb-title {
+	line-height:30px;
+	color: #75808A;
+}
+
+a.imdb-tooltip b {
+	color: #75808A;
+}
+
+a.imdb-tooltip:hover {
+	text-decoration:none;
+}
+
+a.imdb-tooltip span {
+    z-index:10;
+	display:none;
+	color: #75808A;
+	background-color: #F5F5F5;
+    margin-top:-30px;
+	margin-left:28px;
+}
+
+a.imdb-tooltip table {
+	color: inherit;
+	background-color: inherit;
+	font-size: inherit;
+}
+
+a.imdb-tooltip:hover span{
+    display:inline;
+	position:absolute;
+}
+
+a.imdb-tooltip img {
+    float:left;
+	padding: 5px 10px;
+}
+/*CSS3 extras*/
+a.imdb-tooltip span
+{
+    border-radius:4px;
+    box-shadow: 5px 5px 8px #CCC;
+}
