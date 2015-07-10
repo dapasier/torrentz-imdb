@@ -2,28 +2,28 @@
 	"content_scripts": [
 		{
 			"js": [
-				"script.js"
+				"torrentz-imdb.js"
 			],
 			"css": [
-				"style.css"
+				"torrentz-imdb.css"
 			],
 			"run_at": "document_end",
 			"matches": [
 				"*://torrentz.eu/*",
 				"*://torrentz.ch/*",
 				"*://torrentz.me/*",
-				"*://torrentz.in/*"
+                "*://torrentz.in/*"
 			]
 		}
 	],
 	"description": "Adds IMDb information to torrent files on Torrentz.",
 	"manifest_version": 2,
 	"name": "IMDb for Torrentz",
-	"version": "0.5",
+	"version": "0.6",
 	"icons": {
-		"16": "icon-16.png",
-		"48": "icon-48.png",
-		"128": "icon-128.png"
+		"16": "icons/icon-16.png",
+		"48": "icons/icon-48.png",
+		"128": "icons/icon-128.png"
 	},
 	"permissions": [
 		"http://www.omdbapi.com/"

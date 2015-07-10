@@ -1,0 +1,79 @@
+div.results>dl:hover {
+	background-color: #F5F5F5;
+}
+
+span.imdb {
+	width: 35px;
+    display: block;
+}
+
+a.imdb-link {
+	outline:none;
+}
+
+span.imdb a.imdb-link:hover {
+	text-decoration:none;
+}
+
+a.imdb-link:hover span.imdb-tooltip{
+    display:inline;
+	position:absolute;
+}
+
+span.imdb-rating {
+	color: #FFFFFF;
+    background: #E9D966;
+    width: 31px;
+	display: block;
+    border-radius: 2px;
+    margin-left:2px;
+    font-size: 12px;    
+	text-align: center;
+	font-weight: bold;
+}
+
+span.imdb-tooltip {
+    z-index:10;
+	display:none;
+	color: #75808A;
+	background-color: #F5F5F5;
+    white-space: normal;
+    width:800px;
+    margin-top:10px;
+	margin-left:-835px;
+    text-align:left;
+    border-radius:4px;
+    box-shadow: 5px 5px 8px #CCC;
+}
+
+b.imdb-title {
+	line-height:30px;
+	color: #75808A;
+}
+
+span.imdb-tooltip b {
+	color: #75808A;
+}
+
+span.imdb-tooltip table {
+	color: inherit;
+	background-color: inherit;
+	font-size: inherit;
+}
+
+img.imdb-poster {
+    float:left;
+	padding: 5px;
+}
+
+span.quality {
+    color: #FFFFFF;
+    background-color:hsl(360, 100%, 100%);
+    display: block;
+    border-radius: 2px;
+    width: 62px;
+    text-align: left;
+    font-size: 12px;
+	font-weight: bold;
+}
+
